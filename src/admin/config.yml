@@ -27,5 +27,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Short Description", name: "short_description", widget: "string"}
       - {label: "Long Description", name: "long_description", widget: "markdown"}
+      - {label: "Repository", name: "repository", widget: "string"}
       - {label: "Technology Stack", name: "technology_stack", widget: "list"}
       - {label: "Technology Field", name: "technology_field", widget: "list"}
