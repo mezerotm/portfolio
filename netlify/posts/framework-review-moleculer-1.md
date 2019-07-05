@@ -4,6 +4,7 @@ excerpt: >-
   Moleculer is like the Vue.js of microservice frameworks, it has the best of
   everything and is the easiest to get started with.
 date: 2018-07-31T04:00:00.000Z
+tags: 'node.js, framework, microservices'
 ---
 # Framework Review - Moleculer
 
