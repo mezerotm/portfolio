@@ -1,7 +1,7 @@
 ---
 title: What does a docker development environment look like?
 excerpt: server clustering with raspberry pi was always on my mind
-date: 2019-07-05T22:06:41.940Z
+date: 2018-08-04T04:00:00.000Z
 tags:
   - docker
   - nginx
