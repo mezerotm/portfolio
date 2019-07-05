@@ -60,13 +60,10 @@ long_description: >-
 
   CC BY-NC 4.0 © 2018 Carlos Rincon
 repository: 'https://github.com/mezerotm/eco'
-technology_stack:
-  - javascript
-  - c++
-  - arduino
-technology_field:
+technology_stacks:
+  - ''
+technology_fields:
   - web development
-  - iot
   - electronics
 ---
 
