@@ -4,6 +4,7 @@
 import DefaultLayout from '~/layouts/Default.vue'
 
 import '~/assets/css/styles.css'
+import '~/assets/css/prism/duotone-sea.css'
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
