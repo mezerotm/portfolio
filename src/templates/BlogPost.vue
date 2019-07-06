@@ -6,7 +6,7 @@
 </template>
 
 <page-query>
-    query Post ($id: String!) {
+    query BlogPost ($id: String!) {
         post: blogPost (id: $id) {
             title
             content

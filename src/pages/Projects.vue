@@ -40,9 +40,3 @@
         }
     }
 </page-query>
-
-<script>
-  export default {
-    name: 'portfolio'
-  }
-</script>
