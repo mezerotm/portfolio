@@ -14,7 +14,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", required: "false"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -28,6 +28,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Short Description", name: "short_description", widget: "string"}
       - {label: "Long Description", name: "long_description", widget: "markdown"}
-      - {label: "Repository", name: "repository", widget: "string"}
+      - {label: "Repository", name: "repository", widget: "string", required: "false"}
       - {label: "Technology Stacks", name: "technology_stacks", widget: "list"}
       - {label: "Technology Fields", name: "technology_fields", widget: "list"}
