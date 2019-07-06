@@ -29,8 +29,7 @@ module.exports = {
         feedItemOptions: node => ({
           title: node.title,
           description: node.description,
-          url: 'https://mezerotm.com/blog/' + node.slug,
-          author: node.fields.author
+          url: 'https://mezerotm.com/blog/' + node.slug
         }),
         output: {
           dir: './static',
