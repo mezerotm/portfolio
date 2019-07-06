@@ -17,11 +17,11 @@ long_description: >-
   API](https://developers.google.com/maps/documentation/javascript/) and
   [D3.js](https://github.com/mbostock/d3)
 repository: 'https://github.com/mezerotm/cmv'
-technology_stack:
+technology_stacks:
   - javascript
   - google api
   - d3.js
-technology_field:
+technology_fields:
   - web development
 ---
 
