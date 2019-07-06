@@ -15,7 +15,8 @@
     "gridsome": "^0.6.0",
     "gridsome-plugin-netlify-cms": "^1.0.8",
     "gridsome-plugin-rss": "^1.1.0",
-    "netlify-cms": "^2.9.5"
+    "netlify-cms": "^2.9.5",
+    "vue-disqus": "^3.0.5"
   },
   "devDependencies": {
     "gridsome-plugin-tailwindcss": "^2.2.15"
