@@ -3,7 +3,7 @@
         <g-image class="w-40 h-40 rounded-full" src="~/assets/images/avatar.jpg"/>
         <ul>
             <li class="border-2" v-for="project in $page.projects.edges" :key="project.node.id">
-                <g-link :to="/portfolio/ + project.node.fileInfo.name">
+                <g-link :to="/projects/ + project.node.fileInfo.name">
                     <h1> {{ project.node.title}} </h1>
                     <ul>
                         <li class="inline" v-for="technology in project.node.technology_fields" :key="technology">
@@ -24,7 +24,7 @@
 
 <page-query>
     query Projects {
-        projects: allProject {
+        projects: allProjectPost {
             edges {
                 node {
                     id

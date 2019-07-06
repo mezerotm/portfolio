@@ -11,8 +11,8 @@
     "@gridsome/transformer-remark": "^0.3.2",
     "gridsome": "^0.6.0",
     "gridsome-plugin-netlify-cms": "^1.0.8",
-    "netlify-cms": "^2.9.5",
-    "vue-markdown": "^2.2.4"
+    "gridsome-plugin-rss": "^1.1.0",
+    "netlify-cms": "^2.9.5"
   },
   "devDependencies": {
     "gridsome-plugin-tailwindcss": "^2.2.15"

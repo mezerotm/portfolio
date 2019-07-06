@@ -20,7 +20,7 @@
 
 <page-query>
     query Posts {
-        posts: allPost {
+        posts: allBlogPost {
             edges {
                 node {
                     id

@@ -7,7 +7,7 @@
 
 <page-query>
     query Post ($id: String!) {
-        post: post (id: $id) {
+        post: blogPost (id: $id) {
             title
             content
         }

@@ -7,7 +7,7 @@
 
 <page-query>
     query Project ($id: String!) {
-        project: project (id: $id) {
+        project: projectPost (id: $id) {
             title
             content
         }

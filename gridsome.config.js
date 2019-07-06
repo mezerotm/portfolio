@@ -18,10 +18,31 @@ module.exports = {
 
   plugins: [
     {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: 'BlogPost',
+        feedOptions: {
+          title: 'Just In Time Blog',
+          feed_url: 'https://mezerotm.com/rss.xml',
+          site_url: 'https://mezerotm.com'
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.description,
+          url: 'https://mezerotm.com/blog/' + node.slug,
+          author: node.fields.author
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'netlify/posts/**/*.md',
-        typeName: 'Post',
+        typeName: 'BlogPost',
         route: '/blog/:slug'
       }
     },
@@ -29,15 +50,15 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'netlify/projects/**/*.md',
-        typeName: 'Project',
-        route: '/portfolio/:slug'
+        typeName: 'ProjectPost',
+        route: '/projects/:slug'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'netlify/news/**/*.md',
-        typeName: 'News',
+        typeName: 'NewsPost',
         route: '/news/:slug'
       }
     },
