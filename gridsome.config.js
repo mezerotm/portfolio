@@ -40,9 +40,14 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'netlify/posts/**/*.md',
+        path: 'netlify/blog/**/*.md',
         typeName: 'BlogPost',
-        route: '/blog/:slug'
+        route: '/blog/:slug',
+        remark: {
+          plugin: [
+            '@gridsome/remark-prismjs'
+          ]
+        }
       }
     },
     {
