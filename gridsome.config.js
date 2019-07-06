@@ -29,7 +29,7 @@ module.exports = {
         feedItemOptions: node => ({
           title: node.title,
           description: node.description,
-          url: 'https://mezerotm.com/blog/' + node.slug
+          url: 'https://mezerotm.com/blog/' + JSON.stringify(node)
         }),
         output: {
           dir: './static',
