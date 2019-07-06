@@ -4,7 +4,7 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 module.exports = {
-  siteName: 'Carlos Rincons\' Portfolio',
+  siteName: 'mezerotm',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -20,8 +20,15 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        baseDir: 'netlify',
-        path: '*.md'
+        path: 'netlify/posts/**/*.md',
+        typeName: 'Post'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'netlify/projects/**/*.md',
+        typeName: 'Project'
       }
     },
     {

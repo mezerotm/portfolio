@@ -6,7 +6,9 @@
       </strong>
       <nav class="nav">
         <g-link to="/">Home</g-link>
-        <a href="https://mezerotm.com">Blog</a>
+        <g-link to="/portfolio">Portfolio</g-link>
+        <g-link to="/blog">Blog</g-link>
+        <g-link to="/news">News</g-link>
       </nav>
     </header>
     <slot/>
