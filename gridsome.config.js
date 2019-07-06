@@ -21,14 +21,24 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'netlify/posts/**/*.md',
-        typeName: 'Post'
+        typeName: 'Post',
+        route: '/blog/:slug'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'netlify/projects/**/*.md',
-        typeName: 'Project'
+        typeName: 'Project',
+        route: '/portfolio/:slug'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'netlify/news/**/*.md',
+        typeName: 'News',
+        route: '/news/:slug'
       }
     },
     {
