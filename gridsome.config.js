@@ -5,13 +5,14 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 module.exports = {
   siteName: 'mezerotm',
+  siteUrl: 'https://mezerotm.com',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        // ...global plugins
+        '@gridsome/remark-prismjs'
       ]
     }
   },
@@ -38,16 +39,27 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000,
+        config: {
+          '/blog': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/news': {
+            changefreq: 'weekly',
+            priority: 0.5
+          }
+        }
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'netlify/blog/**/*.md',
         typeName: 'BlogPost',
-        route: '/blog/:slug',
-        remark: {
-          plugin: [
-            '@gridsome/remark-prismjs'
-          ]
-        }
+        route: '/blog/:slug'
       }
     },
     {
@@ -73,7 +85,16 @@ module.exports = {
       }
     },
     {
-      use: 'gridsome-plugin-tailwindcss'
+      use: 'gridsome-plugin-tailwindcss',
+      options: {
+        tailwindConfig: 'tailwind.config.js'
+      }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-135963207-1'
+      }
     }
   ]
 }
