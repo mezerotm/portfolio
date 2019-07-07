@@ -1,8 +1,5 @@
-// This is where project configuration and plugin options are located. 
-// Learn more: https://gridsome.org/docs/config
+const whitelister = require('purgecss-whitelister')
 
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
 module.exports = {
   siteName: 'mezerotm',
   siteUrl: 'https://mezerotm.com',
@@ -87,7 +84,10 @@ module.exports = {
     {
       use: 'gridsome-plugin-tailwindcss',
       options: {
-        tailwindConfig: 'tailwind.config.js'
+        tailwindConfig: 'tailwind.config.js',
+        purgeConfig: {
+          whitelist: whitelister('src/assets/css/prism/duotone-sea.css')
+        }
       }
     },
     {
