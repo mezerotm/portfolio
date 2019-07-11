@@ -1,25 +1,35 @@
-<template>
-    <Layout>
-        <g-image class="w-40 h-40 rounded-full" src="~/assets/images/avatar.jpg"/>
-        <ul>
-            <li class="border-2" v-for="project in $page.projects.edges" :key="project.node.id">
-                <g-link :to="/projects/ + project.node.fileInfo.name">
-                    <h1> {{ project.node.title}} </h1>
-                    <ul>
-                        <li class="inline" v-for="technology in project.node.technology_fields" :key="technology">
-                            {{ technology }}
-                        </li>
-                    </ul>
-                    <h2> {{ project.node.short_description }} </h2>
-                    <ul>
-                        <li class="inline" v-for="technology in project.node.technology_stacks" :key="technology">
-                            {{ technology }}
-                        </li>
-                    </ul>
-                </g-link>
-            </li>
-        </ul>
-    </Layout>
+<template lang="pug">
+    layout
+        ul.mt-6
+            li.border-2(v-for='project in $page.projects.edges' :key='project.node.id')
+                g-link(:to='/projects/ + project.node.fileInfo.name')
+                    h1  {{ project.node.title}}
+                    ul
+                        li.inline(v-for='technology in project.node.technology_fields' :key='technology')
+                            | {{ technology }}
+                    h2  {{ project.node.short_description }}
+                    ul
+                        li.inline(v-for='technology in project.node.technology_stacks' :key='technology')
+                            | {{ technology }}
+        h2.font-bold.text-3xl Contact Me
+        form(name='contact' method='post' v-on:submit.prevent='handleSubmit' action='/success/' data-netlify='true' data-netlify-honeypot='bot-field')
+            input(type='hidden' name='form-name' value='contact')
+            p(hidden='')
+                label
+                    | Don&rsquo;t fill this out:
+                    input(name='bot-field')
+            .sender-info
+                div
+                    label.label(for='name') Your name
+                    input(type='text' name='name' v-model='formData.name')
+                div
+                    label(for='email') Your email
+                    input(type='email' name='email' v-model='formData.email')
+            .message-wrapper
+                label(for='message') Message
+                textarea(name='message' v-model='formData.message')
+            button(type='submit') Submit form
+
 </template>
 
 <page-query>
@@ -40,3 +50,32 @@
         }
     }
 </page-query>
+
+<script>
+    export default {
+      data() {
+        return {
+          formData: {},
+        }
+      },
+      methods: {
+        encode(data) {
+          return Object.keys(data)
+          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+          .join('&')
+        },
+        handleSubmit(e) {
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: this.encode({
+              'form-name': e.target.getAttribute('name'),
+              ...this.formData,
+            }),
+          })
+          .then(() => this.$router.push('/success'))
+          .catch(error => alert(error))
+        }
+      }
+    }
+</script>

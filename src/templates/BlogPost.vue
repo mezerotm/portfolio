@@ -1,8 +1,10 @@
 <template>
     <Layout>
-        <h1>{{ $page.post.title }}</h1>
-        <div class="content" v-html="$page.post.content"></div>
-        <vue-disqus shortname="mezerotm" :identifier="$page.post.title"></vue-disqus>
+        <div class="mt-6">
+            <h1>{{ $page.post.title }}</h1>
+            <div class="content" v-html="$page.post.content"></div>
+            <vue-disqus shortname="mezerotm" :identifier="$page.post.title"></vue-disqus>
+        </div>
     </Layout>
 </template>
 

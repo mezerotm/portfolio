@@ -1,21 +1,15 @@
-<template>
-    <Layout>
-        <ul>
-            <li class="border-2" v-for="post in $page.posts.edges" :key="post.node.id">
-                <g-link :to="/blog/ + post.node.fileInfo.name">
-                    <p> {{ post.node.date }} </p>
-                    <h1> {{ post.node.title}} </h1>
-                    <h2> {{ post.node.excerpt }} </h2>
-                    <p>{{ post.node.timeToRead }} minutes to read</p>
-                    <ul>
-                        <li class="inline" v-for="tag in post.node.tags" :key="tag">
-                            {{ tag }}
-                        </li>
-                    </ul>
-                </g-link>
-            </li>
-        </ul>
-    </Layout>
+<template lang="pug">
+    layout
+        ul.mt-6
+            li.border-2(v-for='post in $page.posts.edges' :key='post.node.id')
+                g-link(:to='/blog/ + post.node.fileInfo.name')
+                    p  {{ post.node.date }}
+                    h1  {{ post.node.title}}
+                    h2  {{ post.node.excerpt }}
+                    p {{ post.node.timeToRead }} minutes to read
+                    ul
+                        li.inline(v-for='tag in post.node.tags' :key='tag')
+                            | {{ tag }}
 </template>
 
 <page-query>

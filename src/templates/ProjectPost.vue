@@ -1,7 +1,9 @@
 <template>
     <Layout>
-        <h1>{{ $page.project.title }}</h1>
-        <div class="content" v-html="$page.project.content"></div>
+        <div class="mt-6">
+            <h1>{{ $page.project.title }}</h1>
+            <div class="content" v-html="$page.project.content"></div>
+        </div>
     </Layout>
 </template>
 

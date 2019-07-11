@@ -21,7 +21,7 @@ module.exports = {
         contentTypeName: 'BlogPost',
         feedOptions: {
           title: 'Just In Time Blog',
-          feed_url: 'https://mezerotm.com/rss.xml',
+          feed_url: 'https://mezerotm.com/.rss',
           site_url: 'https://mezerotm.com'
         },
         feedItemOptions: node => ({
@@ -31,7 +31,7 @@ module.exports = {
         }),
         output: {
           dir: './static',
-          name: 'rss.xml'
+          name: '.rss'
         }
       }
     },
@@ -95,6 +95,9 @@ module.exports = {
       options: {
         id: 'UA-135963207-1'
       }
+    },
+    {
+      use: 'gridsome-plugin-pug'
     }
   ]
 }
