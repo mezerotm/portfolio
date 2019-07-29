@@ -1,5 +1,5 @@
 ---
-title: Census Map Visualization Tool
+title: census map visualization tool
 short_description: >-
   Utilizing the census bureau API, This web application turns large datasets
   into visual information displayed on google maps. 
