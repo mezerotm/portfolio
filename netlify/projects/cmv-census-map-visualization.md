@@ -1,6 +1,8 @@
 ---
 title: Census Map Visualization Tool
-short_description: CMV is a citySDK based map visualizatoin tool
+short_description: >-
+  Utilizing the census bureau API, This web application turns large datasets
+  into visual information displayed on google maps. 
 long_description: >-
   CMV is a [citySDK](http://uscensusbureau.github.io/citysdk) based map
   visualization tool. Turning datasets from the [census bureau
