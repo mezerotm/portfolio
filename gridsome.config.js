@@ -82,15 +82,6 @@ module.exports = {
       }
     },
     {
-      use: 'gridsome-plugin-tailwindcss',
-      options: {
-        tailwindConfig: 'tailwind.config.js',
-        purgeConfig: {
-          whitelist: whitelister('src/assets/css/prism/duotone-sea.css')
-        }
-      }
-    },
-    {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'UA-135963207-1'
@@ -98,6 +89,18 @@ module.exports = {
     },
     {
       use: 'gridsome-plugin-pug'
+    },
+    {
+      use: 'gridsome-plugin-tailwindcss',
+      options: {
+        tailwindConfig: './tailwind.config.js',
+        shouldPurge: false,
+        purgeConfig: {
+          // whitelist: [
+          //
+          // ]
+        }
+      }
     }
   ]
 }

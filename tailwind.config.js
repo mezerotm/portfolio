@@ -10,15 +10,6 @@ module.exports = {
       xl: '1280px',
     },
     colors: {
-      primary: 'var(--primary)',
-      secondary: 'var(--secondary)',
-      ternary: 'var(--ternary)',
-
-      second: {
-        primary: 'var(--second-primary)',
-        secondary: 'var(--second-secondary)',
-      },
-
       transparent: 'transparent',
 
       black: '#000',
@@ -270,7 +261,6 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
-      '13xl': '15rem'
     },
     fontWeight: {
       hairline: '100',
@@ -287,7 +277,7 @@ module.exports = {
       auto: 'auto',
       ...theme('spacing'),
       full: '100%',
-      screen: '100vh',
+      screen: '100vh'
     }),
     inset: {
       '0': '0',
@@ -428,7 +418,6 @@ module.exports = {
     },
   },
   variants: {
-    accessibility: ['responsive', 'focus'],
     alignContent: ['responsive'],
     alignItems: ['responsive'],
     alignSelf: ['responsive'],

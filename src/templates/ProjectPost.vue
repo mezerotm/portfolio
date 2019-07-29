@@ -22,6 +22,9 @@
       return {
         title: this.$page.project.title
       }
+    },
+    mounted () {
+      this.$cookie.set('activeIndex', '/projects')
     }
   }
 </script>

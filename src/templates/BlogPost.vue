@@ -1,11 +1,9 @@
-<template>
-    <Layout>
-        <div class="mt-6">
-            <h1>{{ $page.post.title }}</h1>
-            <div class="content" v-html="$page.post.content"></div>
-            <vue-disqus shortname="mezerotm" :identifier="$page.post.title"></vue-disqus>
-        </div>
-    </Layout>
+<template lang="pug">
+    layout.max-w-3xl.mx-auto
+        .mt-6
+            h1 {{ $page.post.title }}
+            .content(v-html='$page.post.content')
+            vue-disqus(shortname='mezerotm', :identifier='$page.post.title')
 </template>
 
 <page-query>
@@ -23,6 +21,9 @@
       return {
         title: this.$page.post.title
       }
+    },
+    mounted () {
+      this.$cookie.set('activeIndex', '/blog')
     }
   }
 </script>

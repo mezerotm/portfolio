@@ -29,6 +29,9 @@
       const yJacobSchrum = await parser.parseURL(CORS_PROXY + 'https://www.youtube.com/feeds/videos.xml?channel_id=UCCKhH1p0tj1frvcD70tEyDg')
 
       console.log(JSON.stringify(hackerFeed))
+    },
+    mounted () {
+      this.$cookie.set('activeIndex', '/news')
     }
   }
 </script>
