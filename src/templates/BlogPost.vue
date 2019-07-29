@@ -1,7 +1,7 @@
 <template lang="pug">
     layout.max-w-3xl.mx-auto
         h1 {{ $page.post.title }}
-        .content(v-html='$page.post.content')
+        vue-markdown {{ $page.post.content }}
         vue-disqus(shortname='mezerotm', :identifier='$page.post.title')
 </template>
 
@@ -15,7 +15,11 @@
 </page-query>
 
 <script>
+    import VueMarkdown from 'vue-markdown'
   export default {
+      components: {
+        VueMarkdown
+      },
     metaInfo () {
       return {
         title: this.$page.post.title

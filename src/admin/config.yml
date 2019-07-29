@@ -26,13 +26,13 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Short Description", name: "short_description", widget: "string"}
-      - {label: "Long Description", name: "long_description", widget: "markdown"}
       - {label: "Repository", name: "repository", widget: "string", required: false}
       - {label: "Youtube", name: "youtube", widget: "string", required: false}
       - {label: "Website", name: "website", widget: "string", required: false}
       - {label: "Technology Stacks", name: "technology_stacks", widget: "list"}
       - {label: "Technology Fields", name: "technology_fields", widget: "list"}
+      - {label: "Short Description", name: "short_description", widget: "string"}
+      - {label: "Long Description", name: "long_description", widget: "markdown"}
 
   - name: "news"
     label: "News"
