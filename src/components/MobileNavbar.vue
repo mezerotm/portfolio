@@ -6,7 +6,7 @@
             i.el-icon-news
         el-menu-item(index='/blog')
             i.el-icon-reading
-        el-menu-item(index='/projects' disabled)
+        el-menu-item(index='/projects')
             i.el-icon-suitcase
 </template>
 

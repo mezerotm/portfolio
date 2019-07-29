@@ -1,10 +1,7 @@
-<template>
-    <Layout>
-        <div class="mt-6">
-            <h1>{{ $page.project.title }}</h1>
-            <div class="content" v-html="$page.project.content"></div>
-        </div>
-    </Layout>
+<template lang="pug">
+    layout.max-w-3xl.mx-auto
+        h1 {{ $page.project.title }}
+        .content(v-html='$page.project.content')
 </template>
 
 <page-query>

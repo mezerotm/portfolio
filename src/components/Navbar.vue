@@ -3,7 +3,7 @@
         el-menu-item(index='/') home
         el-menu-item(index='/news' disabled) news
         el-menu-item(index='/blog') blog
-        el-menu-item(index='/projects' disabled) projects
+        el-menu-item(index='/projects') projects
 </template>
 
 <script>

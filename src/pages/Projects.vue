@@ -1,16 +1,16 @@
 <template lang="pug">
-    layout
-        ul.mt-6
-            li.border-2(v-for='project in $page.projects.edges' :key='project.node.id')
+    layout.max-w-3xl.mx-auto
+        ul
+            li.border.border-gray-200.bg-gray-100.rounded.py-3.px-4.mb-3.b-2(v-for='project in $page.projects.edges' :key='project.node.id')
                 g-link(:to='/projects/ + project.node.fileInfo.name')
-                    h1  {{ project.node.title}}
-                    ul
-                        li.inline(v-for='technology in project.node.technology_fields' :key='technology')
-                            | {{ technology }}
-                    h2  {{ project.node.short_description }}
-                    ul
-                        li.inline(v-for='technology in project.node.technology_stacks' :key='technology')
-                            | {{ technology }}
+                    .flex.justify-between.mb-3
+                        h2.uppercase.font-bold  {{ project.node.title}}
+                        ul
+                            li.uppercase.text-sm.inline-block.bg-gray-200.rounded.px-2(v-for='technology in project.node.technology_fields' :key='technology' :class='$mq === "sm" ? "mb-2" : "mr-2"') {{ technology }}
+                    .flex.justify-between.mb-3
+                        p  {{ project.node.short_description }}
+                        ul
+                            li.uppercase.text-sm.inline-block.bg-gray-200.rounded.px-2(v-for='technology in project.node.technology_stacks' :key='technology' :class='$mq === "sm" ? "mb-2" : "mr-2"') {{ technology }}
 </template>
 
 <page-query>
