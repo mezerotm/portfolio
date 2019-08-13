@@ -19,5 +19,8 @@ long_description: >-
   representation that anyone can view using [Google Maps Javascript
   API](https://developers.google.com/maps/documentation/javascript/) and
   [D3.js](https://github.com/mbostock/d3)
+
+
+  ![](/uploads/blob.png)
 ---
 
