@@ -1,5 +1,5 @@
 ---
-title: 'css: inventory mangment lister'
+title: 'css: inventory management lister'
 technology_stacks:
   - vue.js
   - vuex
