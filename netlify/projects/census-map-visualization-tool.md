@@ -13,6 +13,9 @@ short_description: >-
   from the US Census Data Bureau onto goole maps in order to visualize
   quantifiable information. 
 long_description: >-
+  ![](/uploads/blob.png)
+
+
   CMV is a [citySDK](http://uscensusbureau.github.io/citysdk) based map
   visualization tool; turning datasets from the [census bureau
   API](http://census.gov/data/developers/data-sets.html) into a visual
